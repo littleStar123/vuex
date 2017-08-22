@@ -1,11 +1,15 @@
-//test
-export const increment = ({commit}) => {
-    commit('INCREMENT')
+
+export const addGoods = ({commit},newGoods) => {
+    commit('ADDGOODS',newGoods)
 }
-export const decrement = ({commit}) => {
-    commit('DECREMENT')
+export const subGoods = ({commit},newGoods) => {
+    commit('SUBGOODS',newGoods)
 }
-export const add = ({commit}) => {
-    commit('add')
+export const setSum = ({commit},val) => {
+    commit('SETSUM',val)
 }
+export const calSum = ({commit}) => {
+    commit('CALSUM')
+}
+
 

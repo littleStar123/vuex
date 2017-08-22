@@ -7,7 +7,7 @@ import vuex from 'vuex'
 import store from './vuex/store'
 
 Vue.config.productionTip = false
-
+window.eventHub = new Vue();
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -16,3 +16,4 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+

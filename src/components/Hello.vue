@@ -52,3 +52,8 @@ a {
   color: #42b983;
 }
 </style>
+<style>
+	li{
+		list-style: none;
+	}
+</style>

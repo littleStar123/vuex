@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<c-list></c-list>
-		<shop-car></shop-car>
+		<c-list ></c-list>
+		<shop-car  ></shop-car>
 	</div>
 </template>
 <script>
@@ -16,6 +16,12 @@ export default {
 	    return {
 	      msg: 'Welcome to Your Vue.js App'
 	    }
+	},
+	methods:{
+		shop(){
+			console.log("msg")
+			this.$broadcast("calSum")
+		}
 	}
 }
 </script>

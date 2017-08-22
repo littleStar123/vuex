@@ -1,7 +1,7 @@
 <template>
     <div>
-    	{{getCount()}}
-    	<a  @click="adad">123</a>
+    	<li v-for="item in shopGoods">{{item.name}}*{{item.toShop}}</li>
+    	<div>{{sumMoney}}</div>
     </div>
 </template>
 <script>
@@ -9,16 +9,22 @@ export default {
 	name: 'shop-car',
 	data () {
 	    return {
-	      msg: ""
+	    	shopGoods:[],	//放入购物车的货物
+	    	sumMoney:0
 	    }
 	},
 	methods:{
-		getCount(){
-			return this.$store.getters.getCount;
-		},
-		adad(){
-			 this.$store.dispatch("add");			 
+		shop(){
+			this.sumMoney=this.$store.getters.getSumMoney;
 		}
+	},
+	mounted(){
+		this.shopGoods=this.$store.getters.getGoods;
+		this.sumMoney=this.$store.getters.getSumMoney;
+		window.eventHub.$on('shop',this.shop);
+	},
+	beforeDestroy: function () {
+	  eventHub.$off('shop', this.shop)
 	}
 }
 </script>
