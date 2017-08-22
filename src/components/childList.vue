@@ -60,9 +60,6 @@
         	}
         },
         methods:{
-        	add(){
-        		 //this.$store.commit('add')
-        	},
         	addGood(goods){
         		goods.toShop++;
         		this.$store.dispatch("addGoods",goods);

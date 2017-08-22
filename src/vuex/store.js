@@ -7,7 +7,6 @@ Vue.use(Vuex)
 
 // 应用初始状态
 const state = {
-    count: 10,
     goods:[{
 		toShop:1,	//放入购物车
 		id:0,
@@ -53,7 +52,6 @@ const mutations = {
     	for(var i=0;i<state.goods.length;++i){
     		state.sumMoney+=(state.goods[i].price*state.goods[i].toShop);
     	}
-    	console.log(state.sumMoney)
     },
      SETSUM(state,val){
     	state.setsumMoney=val;

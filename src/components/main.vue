@@ -18,10 +18,6 @@ export default {
 	    }
 	},
 	methods:{
-		shop(){
-			console.log("msg")
-			this.$broadcast("calSum")
-		}
 	}
 }
 </script>

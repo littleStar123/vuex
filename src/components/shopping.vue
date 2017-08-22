@@ -1,7 +1,7 @@
 <template>
     <div>
     	<li v-for="item in shopGoods">{{item.name}}*{{item.toShop}}</li>
-    	<div>{{sumMoney}}</div>
+    	<div>总价：{{sumMoney}}</div>
     </div>
 </template>
 <script>
@@ -30,4 +30,7 @@ export default {
 </script>
 
 <style scoped>
+li{
+	list-style: none;
+}
 </style>
